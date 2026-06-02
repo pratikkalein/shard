@@ -396,33 +396,32 @@ code {
 
 /* ─────────────────────────────────────────────
    React Flow chrome
+   !important needed — RF stylesheet loads after globals.css
 ───────────────────────────────────────────── */
 .react-flow__controls {
-  border: 1px solid var(--border-strong);
-  border-radius: 8px;
+  border: 1px solid var(--border-strong) !important;
+  border-radius: 8px !important;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5) !important;
 }
 .react-flow__controls-button {
-  background: var(--panel);
-  border: none;
-  border-bottom: 1px solid var(--border);
-  fill: var(--text-muted);
-  width: 28px;
-  height: 28px;
+  background: var(--panel) !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  fill: var(--text-muted) !important;
+  width: 28px !important;
+  height: 28px !important;
   transition: background 0.1s ease, fill 0.1s ease;
 }
 .react-flow__controls-button:hover {
-  background: var(--panel-alt);
-  fill: var(--accent-bright);
+  background: var(--panel-alt) !important;
+  fill: var(--accent-bright) !important;
 }
 .react-flow__controls-button:last-child {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 .react-flow__attribution {
-  background: transparent;
-  color: var(--text-faint);
-  font-size: 10px;
+  display: none;
 }
 .react-flow__edge-path {
   stroke-linecap: round;
