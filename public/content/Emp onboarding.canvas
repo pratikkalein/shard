@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"3da9c40e5b693290","type":"text","text":"Employee resets password.\nRedirected to multistep onboarding form","x":-20,"y":517,"width":250,"height":103},
+		{"id":"3faf24069e289103","type":"text","text":"#### **Step 1** - Personal Information\n\n**Section 1 - Personal Information**\n\nFather's Name*\nPersonal Email*\nPhone No*\nGender\nHeight \nWeight\n\nMartial Status\n> if married\nMarriage Date\nSpouse Name\n\nCountry of Origin\nNationality*\nPhysically Challenged\n>if yes\nDisability Type\n\nReligion\n\n**Section 2 - Address**\nPermanent Address* \nCurrent Address (Same as above checkbox)*\n\n**Section 3 - Qualifications**\nQualification\nFrom Year - To Year\nInstitue\nGrade\n\nCan be added multiple like LinkedIn\n\n","x":400,"y":517,"width":381,"height":863},
+		{"id":"746fff773a67a527","type":"text","text":"**Add new employee (Admin)**\n\nEmployee Name\nEmployee Number\nDate of Joining\nLocation\nEmail ID\n\nAdding this info sends invite email to the employee with expiry date of 7 days.","x":-500,"y":517,"width":366,"height":267},
+		{"id":"64addbd7ad8da82a","type":"file","file":"Screenshot 2026-06-02 at 6.24.40 PM (2).png","x":401,"y":1460,"width":380,"height":214},
+		{"id":"fc27c80859e6b9a7","type":"text","text":"### Step 2 - Work Experience\n\nCompany Name\nDesignation\nFrom Date - To Date\nReason for leaving\nCompany Address\n\nCan be added multiple like LinkedIn","x":920,"y":517,"width":380,"height":292},
+		{"id":"424da69da7bae832","type":"file","file":"Screenshot 2026-06-02 at 6.52.19 PM.png","x":910,"y":949,"width":400,"height":188},
+		{"id":"5a70c41baaac8d06","type":"text","text":"### Step 3 - Bank & Statutory Details\n\n**Bank account details**\n\nAccount Number\nConfirm Bank Account Number\nIFSC Code\nPayee Name\nAccount Type\n\n**PF Account details**\n\nPF Account Number\nUAN\n\n**Permanent Account Number (PAN)**\nPAN Number\nName in PAN\n\n**Aadhaar**\nAadhar Number\nName in Aadhaar\n\n**Passport**\nPassport Number\nName in Passport\nExpiry Date\n\n\n\n\n","x":1480,"y":517,"width":380,"height":663},
+		{"id":"10a03f9873e6a9c1","type":"text","text":"### Step 4 - Family & Nominee Details\n\n**Family Details**\nName \nRelationship\nDOB\nGender\n\nCan be added multiple like LinkedIn\n\n**Nominee Details**\nName\nRelationship\n\n\n\n\n","x":1980,"y":517,"width":380,"height":363},
+		{"id":"03ef278d4df1df04","type":"text","text":"### Step 5 - Attachments\n\nAddress Proof\nQualification (This will be dynamic based on which qualifications are added)\nAadhar Card\nPan Card\nBank Details\n\n\n\n\n\n\n","x":2480,"y":517,"width":380,"height":223},
+		{"id":"8bee21554b846874","type":"text","text":"### Show Summary\nShow summary of all the information which is filled","x":3040,"y":517,"width":380,"height":179},
+		{"id":"775b3b2ad6ce11b9","type":"file","file":"Screenshot 2026-06-02 at 8.00.59 PM.png","x":3040,"y":849,"width":379,"height":188}
+	],
+	"edges":[
+		{"id":"4ec1a7820b74ff0e","fromNode":"746fff773a67a527","fromSide":"right","toNode":"3da9c40e5b693290","toSide":"left"},
+		{"id":"85693ce1d4a08d60","fromNode":"3da9c40e5b693290","fromSide":"right","toNode":"3faf24069e289103","toSide":"left"},
+		{"id":"5ca4db324988d79f","fromNode":"64addbd7ad8da82a","fromSide":"top","toNode":"3faf24069e289103","toSide":"bottom"},
+		{"id":"e436ecfd1f19538d","fromNode":"3faf24069e289103","fromSide":"right","toNode":"fc27c80859e6b9a7","toSide":"left"},
+		{"id":"84566eda43cfccc8","fromNode":"fc27c80859e6b9a7","fromSide":"right","toNode":"5a70c41baaac8d06","toSide":"left"},
+		{"id":"76622f51e3e54de4","fromNode":"424da69da7bae832","fromSide":"top","toNode":"fc27c80859e6b9a7","toSide":"bottom"},
+		{"id":"483a16506e02f83f","fromNode":"5a70c41baaac8d06","fromSide":"right","toNode":"10a03f9873e6a9c1","toSide":"left"},
+		{"id":"ead6a43381346d62","fromNode":"10a03f9873e6a9c1","fromSide":"right","toNode":"03ef278d4df1df04","toSide":"left"},
+		{"id":"6996e21bc7c7466d","fromNode":"03ef278d4df1df04","fromSide":"right","toNode":"8bee21554b846874","toSide":"left"},
+		{"id":"f403bff7cc04613e","fromNode":"775b3b2ad6ce11b9","fromSide":"top","toNode":"8bee21554b846874","toSide":"bottom"}
+	]
+}
