@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="sans-serif">
+  <rect width="320" height="200" fill="#2a2a2a"/>
+  <rect x="24" y="70" width="90" height="56" rx="8" fill="#53dfdd" opacity="0.85"/>
+  <rect x="206" y="70" width="90" height="56" rx="8" fill="#a882ff" opacity="0.85"/>
+  <line x1="114" y1="98" x2="206" y2="98" stroke="#bbb" stroke-width="2"/>
+  <polygon points="206,98 196,92 196,104" fill="#bbb"/>
+  <text x="69" y="103" fill="#10242b" font-size="14" text-anchor="middle">Obsidian</text>
+  <text x="251" y="103" fill="#1a1030" font-size="14" text-anchor="middle">Web</text>
+  <text x="160" y="40" fill="#dcddde" font-size="13" text-anchor="middle">A referenced image (SVG)</text>
+</svg>

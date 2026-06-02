@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "group1",
+      "type": "group",
+      "x": -60,
+      "y": -100,
+      "width": 960,
+      "height": 700,
+      "color": "5",
+      "label": "Getting started"
+    },
+    {
+      "id": "t1",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 130,
+      "text": "# Welcome 👋\n\nThis canvas was authored in **Obsidian** and published to the web using [JSON Canvas](https://jsoncanvas.org)."
+    },
+    {
+      "id": "t2",
+      "type": "text",
+      "x": 0,
+      "y": 220,
+      "width": 320,
+      "height": 170,
+      "color": "4",
+      "text": "## How to publish\n\n1. Drop a `.canvas` file into `public/content/`\n2. Add any notes & images it references\n3. `git push` → Vercel builds it"
+    },
+    {
+      "id": "f1",
+      "type": "file",
+      "x": 460,
+      "y": -20,
+      "width": 380,
+      "height": 260,
+      "file": "notes/about.md"
+    },
+    {
+      "id": "f2",
+      "type": "file",
+      "x": 460,
+      "y": 300,
+      "width": 380,
+      "height": 240,
+      "file": "attachments/diagram.svg"
+    },
+    {
+      "id": "l1",
+      "type": "link",
+      "x": 0,
+      "y": 440,
+      "width": 320,
+      "height": 150,
+      "url": "https://jsoncanvas.org"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "t1",
+      "toNode": "t2",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "t1",
+      "toNode": "f1",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "details"
+    },
+    {
+      "id": "e3",
+      "fromNode": "t2",
+      "toNode": "l1",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e4",
+      "fromNode": "f1",
+      "toNode": "f2",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "2"
+    }
+  ]
+}
