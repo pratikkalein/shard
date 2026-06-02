@@ -8,14 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "@upstash/redis": "^1.38.0",
     "@xyflow/react": "^12.3.6",
+    "bcryptjs": "^3.0.3",
     "next": "^15.1.4",
+    "next-auth": "^5.0.0-beta.31",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^9.0.3",
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^22.10.5",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",

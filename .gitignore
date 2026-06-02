@@ -5,3 +5,7 @@ out
 *.log
 .vercel
 next-env.d.ts
+# Never commit secrets
+.env
+.env.local
+.env*.local

@@ -16,6 +16,7 @@ import TextNode from "./nodes/TextNode";
 import LinkNode from "./nodes/LinkNode";
 import FileNode from "./nodes/FileNode";
 import GroupNode from "./nodes/GroupNode";
+import PublishButton from "./PublishButton";
 
 const nodeTypes = {
   text: TextNode,
@@ -28,10 +29,12 @@ const DEFAULT_EDGE_COLOR = "#888";
 
 export default function CanvasViewer({
   title,
+  slug,
   nodes,
   edges,
 }: {
   title: string;
+  slug: string;
   nodes: ViewNode[];
   edges: ViewEdge[];
 }) {
@@ -76,6 +79,7 @@ export default function CanvasViewer({
           ← Shard
         </Link>
         <span className="viewer-title">{title}</span>
+        <PublishButton slug={slug} />
       </div>
       <ReactFlow
         nodes={rfNodes}

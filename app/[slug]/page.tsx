@@ -20,5 +20,5 @@ export default async function CanvasPage({
   if (!canvas) notFound();
 
   const { nodes, edges } = buildViewModel(canvas);
-  return <CanvasViewer title={name} nodes={nodes} edges={edges} />;
+  return <CanvasViewer title={name} slug={name} nodes={nodes} edges={edges} />;
 }

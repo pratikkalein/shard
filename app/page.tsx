@@ -6,6 +6,7 @@ export default function Home() {
 
   return (
     <main className="home">
+      <Link href="/admin" className="admin-link">Publish settings</Link>
       <div className="home-header">
         <div className="shard-logo" aria-hidden="true">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
