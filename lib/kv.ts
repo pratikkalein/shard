@@ -23,17 +23,26 @@ async function redisGet<T>(path: string): Promise<T | null> {
   }
 }
 
-async function redisPost(commands: unknown[][]): Promise<void> {
+async function redisPost(commands: unknown[][]): Promise<boolean> {
   const conn = base();
-  if (!conn) throw new Error("Redis not configured");
-  await fetch(`${conn.url}/pipeline`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${conn.token}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(commands),
-  });
+  if (!conn) return false;
+  try {
+    await fetch(`${conn.url}/pipeline`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${conn.token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(commands),
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export function isRedisConfigured(): boolean {
+  return base() !== null;
 }
 
 export async function isPublic(slug: string): Promise<boolean> {
@@ -43,9 +52,10 @@ export async function isPublic(slug: string): Promise<boolean> {
   return result === 1;
 }
 
-export async function setPublic(slug: string, pub: boolean): Promise<void> {
+// Returns true on success, false when Redis is not configured.
+export async function setPublic(slug: string, pub: boolean): Promise<boolean> {
   const cmd = pub ? "sadd" : "srem";
-  await redisPost([[cmd, KV_SET, slug]]);
+  return redisPost([[cmd, KV_SET, slug]]);
 }
 
 export async function listPublic(): Promise<string[]> {

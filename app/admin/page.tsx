@@ -1,12 +1,15 @@
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import { revalidatePath } from "next/cache";
 import { auth } from "@/lib/auth";
 import { listCanvases } from "@/lib/canvas";
-import { listPublic, setPublic } from "@/lib/kv";
+import { listPublic, setPublic, isRedisConfigured } from "@/lib/kv";
 
 export default async function AdminPage() {
   const session = await auth();
   if (!session) redirect("/login");
+
+  const redisReady = isRedisConfigured();
 
   const [canvases, publicSlugs] = await Promise.all([
     Promise.resolve(listCanvases()),
@@ -19,6 +22,7 @@ export default async function AdminPage() {
     const slug = formData.get("slug") as string;
     const current = formData.get("current") === "true";
     await setPublic(slug, !current);
+    revalidatePath("/admin");
   }
 
   return (
@@ -27,6 +31,20 @@ export default async function AdminPage() {
         <Link href="/" className="admin-back">← Canvases</Link>
         <h1 className="admin-title">Publish settings</h1>
       </div>
+
+      {!redisReady && (
+        <div className="admin-notice">
+          <strong>Upstash Redis not connected.</strong> Publish/unpublish toggles
+          won&apos;t persist until you connect a Redis database.{" "}
+          <a
+            href="https://vercel.com/integrations?search=upstash"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Set it up in Vercel Integrations →
+          </a>
+        </div>
+      )}
 
       {canvases.length === 0 ? (
         <p className="empty-body">No canvases in <code>public/content/</code> yet.</p>
@@ -47,7 +65,12 @@ export default async function AdminPage() {
                 <form action={toggle}>
                   <input type="hidden" name="slug" value={slug} />
                   <input type="hidden" name="current" value={String(pub)} />
-                  <button type="submit" className={`admin-toggle ${pub ? "toggle-unpublish" : "toggle-publish"}`}>
+                  <button
+                    type="submit"
+                    disabled={!redisReady}
+                    className={`admin-toggle ${pub ? "toggle-unpublish" : "toggle-publish"}`}
+                    title={!redisReady ? "Connect Upstash Redis first" : undefined}
+                  >
                     {pub ? "Make private" : "Publish"}
                   </button>
                 </form>

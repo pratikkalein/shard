@@ -640,6 +640,21 @@ code {
   font-size: 1.2rem;
   font-weight: 700;
 }
+.admin-notice {
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 8px;
+  font-size: 13px;
+  color: #fbbf24;
+  line-height: 1.6;
+}
+.admin-notice a {
+  color: #fbbf24;
+  text-decoration: underline;
+}
+
 .admin-list {
   list-style: none;
   padding: 0;
