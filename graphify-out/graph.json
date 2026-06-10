@@ -1,0 +1,4947 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "authentication_flow",
+        "label": "User Authentication Flow",
+        "nodes": [
+          "login_page_loginpage",
+          "login_loginform_loginform",
+          "login_actions_signinwithgoogle",
+          "login_actions_signinwithcredentials"
+        ],
+        "relation": "implement",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "app/login/page.tsx"
+      },
+      {
+        "id": "canvas_publish_management",
+        "label": "Canvas Publish Management",
+        "nodes": [
+          "admin_page_adminpage",
+          "admin_page_toggle",
+          "toggle_route_post",
+          "status_route_get"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "app/admin/page.tsx"
+      },
+      {
+        "id": "canvas_node_renderers",
+        "label": "Canvas Node Renderers",
+        "nodes": [
+          "nodes_filenode_filenode",
+          "nodes_groupnode_groupnode",
+          "nodes_linknode_linknode",
+          "nodes_textnode_textnode"
+        ],
+        "relation": "implement",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "components/CanvasViewer.tsx"
+      },
+      {
+        "id": "canvas_content_resolution",
+        "label": "Canvas Content Resolution Flow",
+        "nodes": [
+          "lib_canvas_content_dir",
+          "lib_resolvefiles_resolvefilenode",
+          "lib_resolvefiles_buildviewmodel"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "lib/resolveFiles.ts"
+      },
+      {
+        "id": "screenshot_2026_06_02_at_6_24_40_pm_2_onboarding_ui_components",
+        "label": "Onboarding UI Components Group",
+        "nodes": [
+          "screenshot_2026_06_02_at_6_24_40_pm_2_wizard",
+          "screenshot_2026_06_02_at_6_24_40_pm_2_personal_info_form",
+          "screenshot_2026_06_02_at_6_24_40_pm_2_employee_card",
+          "screenshot_2026_06_02_at_6_24_40_pm_2_branding"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "id": "claude_settings_local",
+      "community": 13,
+      "norm_label": "settings.local.json"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "id": "claude_settings_local_permissions",
+      "community": 13,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "id": "claude_settings_local_permissions_allow",
+      "community": 13,
+      "norm_label": "allow"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L1",
+      "id": "slug_page",
+      "community": 1,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "generateStaticParams()",
+      "file_type": "code",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L8",
+      "id": "slug_page_generatestaticparams",
+      "community": 1,
+      "norm_label": "generatestaticparams()"
+    },
+    {
+      "label": "CanvasPage()",
+      "file_type": "code",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L12",
+      "id": "slug_page_canvaspage",
+      "community": 1,
+      "norm_label": "canvaspage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L1",
+      "id": "admin_page",
+      "community": 2,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "AdminPage()",
+      "file_type": "code",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L8",
+      "id": "admin_page_adminpage",
+      "community": 2,
+      "norm_label": "adminpage()"
+    },
+    {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "app/api/admin/toggle/route.ts",
+      "source_location": "L1",
+      "id": "toggle_route",
+      "community": 2,
+      "norm_label": "route.ts"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/admin/toggle/route.ts",
+      "source_location": "L5",
+      "id": "toggle_route_post",
+      "community": 2,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "app/api/auth/[...nextauth]/route.ts",
+      "source_location": "L1",
+      "id": "nextauth_route",
+      "community": 9,
+      "norm_label": "route.ts"
+    },
+    {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "app/api/canvas/[slug]/status/route.ts",
+      "source_location": "L1",
+      "id": "status_route",
+      "community": 2,
+      "norm_label": "route.ts"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/canvas/[slug]/status/route.ts",
+      "source_location": "L5",
+      "id": "status_route_get",
+      "community": 2,
+      "norm_label": "get()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L1",
+      "id": "app_layout",
+      "community": 11,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L4",
+      "id": "app_layout_metadata",
+      "community": 11,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L9",
+      "id": "app_layout_rootlayout",
+      "community": 11,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "LoginForm.tsx",
+      "file_type": "code",
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": "L1",
+      "id": "login_loginform",
+      "community": 5,
+      "norm_label": "loginform.tsx"
+    },
+    {
+      "label": "LoginForm()",
+      "file_type": "code",
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": "L6",
+      "id": "login_loginform_loginform",
+      "community": 5,
+      "norm_label": "loginform()"
+    },
+    {
+      "label": "GoogleIcon()",
+      "file_type": "code",
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": "L57",
+      "id": "login_loginform_googleicon",
+      "community": 5,
+      "norm_label": "googleicon()"
+    },
+    {
+      "label": "actions.ts",
+      "file_type": "code",
+      "source_file": "app/login/actions.ts",
+      "source_location": "L1",
+      "id": "login_actions",
+      "community": 5,
+      "norm_label": "actions.ts"
+    },
+    {
+      "label": "signInWithGoogle()",
+      "file_type": "code",
+      "source_file": "app/login/actions.ts",
+      "source_location": "L6",
+      "id": "login_actions_signinwithgoogle",
+      "community": 5,
+      "norm_label": "signinwithgoogle()"
+    },
+    {
+      "label": "signInWithCredentials()",
+      "file_type": "code",
+      "source_file": "app/login/actions.ts",
+      "source_location": "L10",
+      "id": "login_actions_signinwithcredentials",
+      "community": 5,
+      "norm_label": "signinwithcredentials()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app/login/page.tsx",
+      "source_location": "L1",
+      "id": "login_page",
+      "community": 5,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "LoginPage()",
+      "file_type": "code",
+      "source_file": "app/login/page.tsx",
+      "source_location": "L3",
+      "id": "login_page_loginpage",
+      "community": 5,
+      "norm_label": "loginpage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app/page.tsx",
+      "source_location": "L1",
+      "id": "app_page",
+      "community": 1,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "app/page.tsx",
+      "source_location": "L4",
+      "id": "app_page_home",
+      "community": 1,
+      "norm_label": "home()"
+    },
+    {
+      "label": "CanvasViewer.tsx",
+      "file_type": "code",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L1",
+      "id": "components_canvasviewer",
+      "community": 0,
+      "norm_label": "canvasviewer.tsx"
+    },
+    {
+      "label": "nodeTypes",
+      "file_type": "code",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L21",
+      "id": "components_canvasviewer_nodetypes",
+      "community": 0,
+      "norm_label": "nodetypes"
+    },
+    {
+      "label": "CanvasViewer()",
+      "file_type": "code",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L30",
+      "id": "components_canvasviewer_canvasviewer",
+      "community": 0,
+      "norm_label": "canvasviewer()"
+    },
+    {
+      "label": "PublishButton.tsx",
+      "file_type": "code",
+      "source_file": "components/PublishButton.tsx",
+      "source_location": "L1",
+      "id": "components_publishbutton",
+      "community": 7,
+      "norm_label": "publishbutton.tsx"
+    },
+    {
+      "label": "Status",
+      "file_type": "code",
+      "source_file": "components/PublishButton.tsx",
+      "source_location": "L5",
+      "id": "components_publishbutton_status",
+      "community": 7,
+      "norm_label": "status"
+    },
+    {
+      "label": "PublishButton()",
+      "file_type": "code",
+      "source_file": "components/PublishButton.tsx",
+      "source_location": "L10",
+      "id": "components_publishbutton_publishbutton",
+      "community": 7,
+      "norm_label": "publishbutton()"
+    },
+    {
+      "label": "GlobeIcon()",
+      "file_type": "code",
+      "source_file": "components/PublishButton.tsx",
+      "source_location": "L64",
+      "id": "components_publishbutton_globeicon",
+      "community": 7,
+      "norm_label": "globeicon()"
+    },
+    {
+      "label": "LockIcon()",
+      "file_type": "code",
+      "source_file": "components/PublishButton.tsx",
+      "source_location": "L74",
+      "id": "components_publishbutton_lockicon",
+      "community": 7,
+      "norm_label": "lockicon()"
+    },
+    {
+      "label": "FileNode.tsx",
+      "file_type": "code",
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": "L1",
+      "id": "nodes_filenode",
+      "community": 0,
+      "norm_label": "filenode.tsx"
+    },
+    {
+      "label": "FileNode()",
+      "file_type": "code",
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": "L6",
+      "id": "nodes_filenode_filenode",
+      "community": 0,
+      "norm_label": "filenode()"
+    },
+    {
+      "label": "GroupNode.tsx",
+      "file_type": "code",
+      "source_file": "components/nodes/GroupNode.tsx",
+      "source_location": "L1",
+      "id": "nodes_groupnode",
+      "community": 0,
+      "norm_label": "groupnode.tsx"
+    },
+    {
+      "label": "BG_SIZE",
+      "file_type": "code",
+      "source_file": "components/nodes/GroupNode.tsx",
+      "source_location": "L5",
+      "id": "nodes_groupnode_bg_size",
+      "community": 0,
+      "norm_label": "bg_size"
+    },
+    {
+      "label": "GroupNode()",
+      "file_type": "code",
+      "source_file": "components/nodes/GroupNode.tsx",
+      "source_location": "L11",
+      "id": "nodes_groupnode_groupnode",
+      "community": 0,
+      "norm_label": "groupnode()"
+    },
+    {
+      "label": "LinkNode.tsx",
+      "file_type": "code",
+      "source_file": "components/nodes/LinkNode.tsx",
+      "source_location": "L1",
+      "id": "nodes_linknode",
+      "community": 0,
+      "norm_label": "linknode.tsx"
+    },
+    {
+      "label": "LinkNode()",
+      "file_type": "code",
+      "source_file": "components/nodes/LinkNode.tsx",
+      "source_location": "L5",
+      "id": "nodes_linknode_linknode",
+      "community": 0,
+      "norm_label": "linknode()"
+    },
+    {
+      "label": "Markdown.tsx",
+      "file_type": "code",
+      "source_file": "components/nodes/Markdown.tsx",
+      "source_location": "L1",
+      "id": "nodes_markdown",
+      "community": 0,
+      "norm_label": "markdown.tsx"
+    },
+    {
+      "label": "Markdown()",
+      "file_type": "code",
+      "source_file": "components/nodes/Markdown.tsx",
+      "source_location": "L5",
+      "id": "nodes_markdown_markdown",
+      "community": 0,
+      "norm_label": "markdown()"
+    },
+    {
+      "label": "TextNode.tsx",
+      "file_type": "code",
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": "L1",
+      "id": "nodes_textnode",
+      "community": 0,
+      "norm_label": "textnode.tsx"
+    },
+    {
+      "label": "TextNode()",
+      "file_type": "code",
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": "L6",
+      "id": "nodes_textnode_textnode",
+      "community": 0,
+      "norm_label": "textnode()"
+    },
+    {
+      "label": "handles.tsx",
+      "file_type": "code",
+      "source_file": "components/nodes/handles.tsx",
+      "source_location": "L1",
+      "id": "nodes_handles",
+      "community": 0,
+      "norm_label": "handles.tsx"
+    },
+    {
+      "label": "SIDES",
+      "file_type": "code",
+      "source_file": "components/nodes/handles.tsx",
+      "source_location": "L5",
+      "id": "nodes_handles_sides",
+      "community": 0,
+      "norm_label": "sides"
+    },
+    {
+      "label": "hidden",
+      "file_type": "code",
+      "source_file": "components/nodes/handles.tsx",
+      "source_location": "L12",
+      "id": "nodes_handles_hidden",
+      "community": 0,
+      "norm_label": "hidden"
+    },
+    {
+      "label": "SideHandles()",
+      "file_type": "code",
+      "source_file": "components/nodes/handles.tsx",
+      "source_location": "L23",
+      "id": "nodes_handles_sidehandles",
+      "community": 0,
+      "norm_label": "sidehandles()"
+    },
+    {
+      "label": "auth.config.ts",
+      "file_type": "code",
+      "source_file": "lib/auth.config.ts",
+      "source_location": "L1",
+      "id": "lib_auth_config",
+      "community": 2,
+      "norm_label": "auth.config.ts"
+    },
+    {
+      "label": "authConfig",
+      "file_type": "code",
+      "source_file": "lib/auth.config.ts",
+      "source_location": "L5",
+      "id": "lib_auth_config_authconfig",
+      "community": 2,
+      "norm_label": "authconfig"
+    },
+    {
+      "label": "auth.ts",
+      "file_type": "code",
+      "source_file": "lib/auth.ts",
+      "source_location": "L1",
+      "id": "lib_auth",
+      "community": 2,
+      "norm_label": "auth.ts"
+    },
+    {
+      "label": "{ handlers, auth, signIn, signOut }",
+      "file_type": "code",
+      "source_file": "lib/auth.ts",
+      "source_location": "L7",
+      "id": "lib_auth_handlers_auth_signin_signout",
+      "community": 2,
+      "norm_label": "{ handlers, auth, signin, signout }"
+    },
+    {
+      "label": "canvas.ts",
+      "file_type": "code",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L1",
+      "id": "lib_canvas",
+      "community": 1,
+      "norm_label": "canvas.ts"
+    },
+    {
+      "label": "CONTENT_DIR",
+      "file_type": "code",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L7",
+      "id": "lib_canvas_content_dir",
+      "community": 1,
+      "norm_label": "content_dir"
+    },
+    {
+      "label": "listCanvases()",
+      "file_type": "code",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L10",
+      "id": "lib_canvas_listcanvases",
+      "community": 1,
+      "norm_label": "listcanvases()"
+    },
+    {
+      "label": "loadCanvas()",
+      "file_type": "code",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L19",
+      "id": "lib_canvas_loadcanvas",
+      "community": 1,
+      "norm_label": "loadcanvas()"
+    },
+    {
+      "label": "PRESET_COLORS",
+      "file_type": "code",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L30",
+      "id": "lib_canvas_preset_colors",
+      "community": 1,
+      "norm_label": "preset_colors"
+    },
+    {
+      "label": "resolveColor()",
+      "file_type": "code",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L39",
+      "id": "lib_canvas_resolvecolor",
+      "community": 1,
+      "norm_label": "resolvecolor()"
+    },
+    {
+      "label": "nearestSides()",
+      "file_type": "code",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L45",
+      "id": "lib_canvas_nearestsides",
+      "community": 1,
+      "norm_label": "nearestsides()"
+    },
+    {
+      "label": "kv.ts",
+      "file_type": "code",
+      "source_file": "lib/kv.ts",
+      "source_location": "L1",
+      "id": "lib_kv",
+      "community": 2,
+      "norm_label": "kv.ts"
+    },
+    {
+      "label": "base()",
+      "file_type": "code",
+      "source_file": "lib/kv.ts",
+      "source_location": "L5",
+      "id": "lib_kv_base",
+      "community": 2,
+      "norm_label": "base()"
+    },
+    {
+      "label": "redisGet()",
+      "file_type": "code",
+      "source_file": "lib/kv.ts",
+      "source_location": "L13",
+      "id": "lib_kv_redisget",
+      "community": 2,
+      "norm_label": "redisget()"
+    },
+    {
+      "label": "redisPost()",
+      "file_type": "code",
+      "source_file": "lib/kv.ts",
+      "source_location": "L27",
+      "id": "lib_kv_redispost",
+      "community": 2,
+      "norm_label": "redispost()"
+    },
+    {
+      "label": "isRedisConfigured()",
+      "file_type": "code",
+      "source_file": "lib/kv.ts",
+      "source_location": "L45",
+      "id": "lib_kv_isredisconfigured",
+      "community": 2,
+      "norm_label": "isredisconfigured()"
+    },
+    {
+      "label": "isPublic()",
+      "file_type": "code",
+      "source_file": "lib/kv.ts",
+      "source_location": "L49",
+      "id": "lib_kv_ispublic",
+      "community": 2,
+      "norm_label": "ispublic()"
+    },
+    {
+      "label": "setPublic()",
+      "file_type": "code",
+      "source_file": "lib/kv.ts",
+      "source_location": "L57",
+      "id": "lib_kv_setpublic",
+      "community": 2,
+      "norm_label": "setpublic()"
+    },
+    {
+      "label": "listPublic()",
+      "file_type": "code",
+      "source_file": "lib/kv.ts",
+      "source_location": "L62",
+      "id": "lib_kv_listpublic",
+      "community": 2,
+      "norm_label": "listpublic()"
+    },
+    {
+      "label": "resolveFiles.ts",
+      "file_type": "code",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L1",
+      "id": "lib_resolvefiles",
+      "community": 1,
+      "norm_label": "resolvefiles.ts"
+    },
+    {
+      "label": "IMAGE_EXT",
+      "file_type": "code",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L13",
+      "id": "lib_resolvefiles_image_ext",
+      "community": 1,
+      "norm_label": "image_ext"
+    },
+    {
+      "label": "toContentUrl()",
+      "file_type": "code",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L25",
+      "id": "lib_resolvefiles_tocontenturl",
+      "community": 1,
+      "norm_label": "tocontenturl()"
+    },
+    {
+      "label": "resolveFileNode()",
+      "file_type": "code",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L30",
+      "id": "lib_resolvefiles_resolvefilenode",
+      "community": 1,
+      "norm_label": "resolvefilenode()"
+    },
+    {
+      "label": "extractSubpath()",
+      "file_type": "code",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L48",
+      "id": "lib_resolvefiles_extractsubpath",
+      "community": 1,
+      "norm_label": "extractsubpath()"
+    },
+    {
+      "label": "buildViewModel()",
+      "file_type": "code",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L72",
+      "id": "lib_resolvefiles_buildviewmodel",
+      "community": 1,
+      "norm_label": "buildviewmodel()"
+    },
+    {
+      "label": "types.ts",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L1",
+      "id": "lib_types",
+      "community": 0,
+      "norm_label": "types.ts"
+    },
+    {
+      "label": "CanvasColor",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L5",
+      "id": "lib_types_canvascolor",
+      "community": 0,
+      "norm_label": "canvascolor"
+    },
+    {
+      "label": "Side",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L6",
+      "id": "lib_types_side",
+      "community": 1,
+      "norm_label": "side"
+    },
+    {
+      "label": "Arrow",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L7",
+      "id": "lib_types_arrow",
+      "community": 0,
+      "norm_label": "arrow"
+    },
+    {
+      "label": "NodeBase",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L9",
+      "id": "lib_types_nodebase",
+      "community": 0,
+      "norm_label": "nodebase"
+    },
+    {
+      "label": "TextNode",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L19",
+      "id": "lib_types_textnode",
+      "community": 0,
+      "norm_label": "textnode"
+    },
+    {
+      "label": "FileNode",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L24",
+      "id": "lib_types_filenode",
+      "community": 0,
+      "norm_label": "filenode"
+    },
+    {
+      "label": "LinkNode",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L30",
+      "id": "lib_types_linknode",
+      "community": 0,
+      "norm_label": "linknode"
+    },
+    {
+      "label": "GroupNode",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L35",
+      "id": "lib_types_groupnode",
+      "community": 0,
+      "norm_label": "groupnode"
+    },
+    {
+      "label": "CanvasNode",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L42",
+      "id": "lib_types_canvasnode",
+      "community": 0,
+      "norm_label": "canvasnode"
+    },
+    {
+      "label": "CanvasEdge",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L44",
+      "id": "lib_types_canvasedge",
+      "community": 0,
+      "norm_label": "canvasedge"
+    },
+    {
+      "label": "JSONCanvas",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L56",
+      "id": "lib_types_jsoncanvas",
+      "community": 1,
+      "norm_label": "jsoncanvas"
+    },
+    {
+      "label": "ResolvedFile",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L63",
+      "id": "lib_types_resolvedfile",
+      "community": 0,
+      "norm_label": "resolvedfile"
+    },
+    {
+      "label": "TextData",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L68",
+      "id": "lib_types_textdata",
+      "community": 0,
+      "norm_label": "textdata"
+    },
+    {
+      "label": "LinkData",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L69",
+      "id": "lib_types_linkdata",
+      "community": 0,
+      "norm_label": "linkdata"
+    },
+    {
+      "label": "GroupData",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L70",
+      "id": "lib_types_groupdata",
+      "community": 0,
+      "norm_label": "groupdata"
+    },
+    {
+      "label": "NodeData",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L76",
+      "id": "lib_types_nodedata",
+      "community": 0,
+      "norm_label": "nodedata"
+    },
+    {
+      "label": "ViewNode",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L78",
+      "id": "lib_types_viewnode",
+      "community": 0,
+      "norm_label": "viewnode"
+    },
+    {
+      "label": "ViewEdge",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L89",
+      "id": "lib_types_viewedge",
+      "community": 0,
+      "norm_label": "viewedge"
+    },
+    {
+      "label": "ViewModel",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L101",
+      "id": "lib_types_viewmodel",
+      "community": 1,
+      "norm_label": "viewmodel"
+    },
+    {
+      "label": "middleware.ts",
+      "file_type": "code",
+      "source_file": "middleware.ts",
+      "source_location": "L1",
+      "id": "middleware",
+      "community": 2,
+      "norm_label": "middleware.ts"
+    },
+    {
+      "label": "{ auth }",
+      "file_type": "code",
+      "source_file": "middleware.ts",
+      "source_location": "L6",
+      "id": "middleware_auth",
+      "community": 2,
+      "norm_label": "{ auth }"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "middleware.ts",
+      "source_location": "L30",
+      "id": "middleware_config",
+      "community": 2,
+      "norm_label": "config"
+    },
+    {
+      "label": "next-auth.d.ts",
+      "file_type": "code",
+      "source_file": "next-auth.d.ts",
+      "source_location": "L1",
+      "id": "next_auth_d",
+      "community": 15,
+      "norm_label": "next-auth.d.ts"
+    },
+    {
+      "label": "Session",
+      "file_type": "code",
+      "source_file": "next-auth.d.ts",
+      "source_location": "L4",
+      "id": "next_auth_d_session",
+      "community": 15,
+      "norm_label": "session"
+    },
+    {
+      "label": "next.config.mjs",
+      "file_type": "code",
+      "source_file": "next.config.mjs",
+      "source_location": "L1",
+      "id": "next_config",
+      "community": 16,
+      "norm_label": "next.config.mjs"
+    },
+    {
+      "label": "nextConfig",
+      "file_type": "code",
+      "source_file": "next.config.mjs",
+      "source_location": "L2",
+      "id": "next_config_nextconfig",
+      "community": 16,
+      "norm_label": "nextconfig"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "id": "package",
+      "community": 3,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "id": "package_name",
+      "community": 3,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "id": "package_version",
+      "community": 3,
+      "norm_label": "version"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "id": "package_private",
+      "community": 3,
+      "norm_label": "private"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "id": "package_scripts",
+      "community": 3,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "id": "package_scripts_dev",
+      "community": 3,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "id": "package_scripts_build",
+      "community": 3,
+      "norm_label": "build"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "id": "package_scripts_start",
+      "community": 3,
+      "norm_label": "start"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "id": "package_dependencies",
+      "community": 3,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@upstash/redis",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "id": "package_dependencies_upstash_redis",
+      "community": 3,
+      "norm_label": "@upstash/redis"
+    },
+    {
+      "label": "@xyflow/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "id": "package_dependencies_xyflow_react",
+      "community": 3,
+      "norm_label": "@xyflow/react"
+    },
+    {
+      "label": "bcryptjs",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "id": "package_dependencies_bcryptjs",
+      "community": 3,
+      "norm_label": "bcryptjs"
+    },
+    {
+      "label": "next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "id": "package_dependencies_next",
+      "community": 3,
+      "norm_label": "next"
+    },
+    {
+      "label": "next-auth",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "id": "package_dependencies_next_auth",
+      "community": 3,
+      "norm_label": "next-auth"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "id": "package_dependencies_react",
+      "community": 3,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "package_dependencies_react_dom",
+      "community": 3,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "react-markdown",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "id": "package_dependencies_react_markdown",
+      "community": 3,
+      "norm_label": "react-markdown"
+    },
+    {
+      "label": "remark-gfm",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "id": "package_dependencies_remark_gfm",
+      "community": 3,
+      "norm_label": "remark-gfm"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "id": "package_devdependencies",
+      "community": 3,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@types/bcryptjs",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "id": "package_devdependencies_types_bcryptjs",
+      "community": 3,
+      "norm_label": "@types/bcryptjs"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "id": "package_devdependencies_types_node",
+      "community": 3,
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "id": "package_devdependencies_types_react",
+      "community": 3,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "id": "package_devdependencies_types_react_dom",
+      "community": 3,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "id": "package_devdependencies_typescript",
+      "community": 3,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L1",
+      "id": "tsconfig",
+      "community": 4,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "id": "tsconfig_compileroptions",
+      "community": 4,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "id": "tsconfig_compileroptions_target",
+      "community": 4,
+      "norm_label": "target"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "id": "tsconfig_compileroptions_lib",
+      "community": 4,
+      "norm_label": "lib"
+    },
+    {
+      "label": "allowJs",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "id": "tsconfig_compileroptions_allowjs",
+      "community": 4,
+      "norm_label": "allowjs"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "id": "tsconfig_compileroptions_skiplibcheck",
+      "community": 4,
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "id": "tsconfig_compileroptions_strict",
+      "community": 4,
+      "norm_label": "strict"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "id": "tsconfig_compileroptions_noemit",
+      "community": 4,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "esModuleInterop",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "id": "tsconfig_compileroptions_esmoduleinterop",
+      "community": 4,
+      "norm_label": "esmoduleinterop"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "id": "tsconfig_compileroptions_module",
+      "community": 4,
+      "norm_label": "module"
+    },
+    {
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "id": "tsconfig_compileroptions_moduleresolution",
+      "community": 4,
+      "norm_label": "moduleresolution"
+    },
+    {
+      "label": "resolveJsonModule",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "id": "tsconfig_compileroptions_resolvejsonmodule",
+      "community": 4,
+      "norm_label": "resolvejsonmodule"
+    },
+    {
+      "label": "isolatedModules",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "id": "tsconfig_compileroptions_isolatedmodules",
+      "community": 4,
+      "norm_label": "isolatedmodules"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "id": "tsconfig_compileroptions_jsx",
+      "community": 4,
+      "norm_label": "jsx"
+    },
+    {
+      "label": "incremental",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "id": "tsconfig_compileroptions_incremental",
+      "community": 4,
+      "norm_label": "incremental"
+    },
+    {
+      "label": "plugins",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "id": "tsconfig_compileroptions_plugins",
+      "community": 4,
+      "norm_label": "plugins"
+    },
+    {
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L17",
+      "id": "tsconfig_compileroptions_paths",
+      "community": 4,
+      "norm_label": "paths"
+    },
+    {
+      "label": "@/*",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L17",
+      "id": "tsconfig_paths",
+      "community": 4,
+      "norm_label": "@/*"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L19",
+      "id": "tsconfig_include",
+      "community": 4,
+      "norm_label": "include"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L20",
+      "id": "tsconfig_exclude",
+      "community": 4,
+      "norm_label": "exclude"
+    },
+    {
+      "label": "{ GET, POST }",
+      "file_type": "code",
+      "source_file": "app/api/auth/[...nextauth]/route.ts",
+      "source_location": "L2",
+      "id": "nextauth_route_get_post",
+      "community": 19,
+      "norm_label": "{ get, post }"
+    },
+    {
+      "label": "Claude Settings Permissions",
+      "file_type": "document",
+      "source_file": ".claude/settings.local.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_claude_settings_local_permissions",
+      "community": 1,
+      "norm_label": "claude settings permissions"
+    },
+    {
+      "label": "dynamicParams",
+      "file_type": "code",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_slug__page_dynamicparams",
+      "community": 17,
+      "norm_label": "dynamicparams"
+    },
+    {
+      "label": "generateStaticParams",
+      "file_type": "code",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_slug__page_generatestaticparams",
+      "community": 1,
+      "norm_label": "generatestaticparams"
+    },
+    {
+      "label": "CanvasPage",
+      "file_type": "code",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_slug__page_canvaspage",
+      "community": 1,
+      "norm_label": "canvaspage"
+    },
+    {
+      "label": "toggle",
+      "file_type": "code",
+      "source_file": "app/admin/page.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "admin_page_toggle",
+      "community": 2,
+      "norm_label": "toggle"
+    },
+    {
+      "label": "GET",
+      "file_type": "code",
+      "source_file": "app/api/auth/[...nextauth]/route.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "___nextauth__route_get",
+      "community": 9,
+      "norm_label": "get"
+    },
+    {
+      "label": "POST",
+      "file_type": "code",
+      "source_file": "app/api/auth/[...nextauth]/route.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "___nextauth__route_post",
+      "community": 9,
+      "norm_label": "post"
+    },
+    {
+      "label": "auth",
+      "file_type": "code",
+      "source_file": "lib/auth.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "lib_auth_auth",
+      "community": 2,
+      "norm_label": "auth"
+    },
+    {
+      "label": "handlers",
+      "file_type": "code",
+      "source_file": "lib/auth.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "lib_auth_handlers",
+      "community": 9,
+      "norm_label": "handlers"
+    },
+    {
+      "label": "signIn",
+      "file_type": "code",
+      "source_file": "lib/auth.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "lib_auth_signin",
+      "community": 5,
+      "norm_label": "signin"
+    },
+    {
+      "label": "KV_SET Constant",
+      "file_type": "code",
+      "source_file": "lib/kv.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "lib_kv_kv_set",
+      "community": 18,
+      "norm_label": "kv_set constant"
+    },
+    {
+      "label": "Auth and Privacy Router Middleware",
+      "file_type": "code",
+      "source_file": "middleware.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "middleware_default",
+      "community": 2,
+      "norm_label": "auth and privacy router middleware"
+    },
+    {
+      "label": "JSON Canvas Specification",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_json_canvas",
+      "community": 0,
+      "norm_label": "json canvas specification"
+    },
+    {
+      "label": "Obsidian Canvas Format",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_obsidian_canvas",
+      "community": 14,
+      "norm_label": "obsidian canvas format"
+    },
+    {
+      "label": "Static Canvas Viewer",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_static_canvas_viewer",
+      "community": 0,
+      "norm_label": "static canvas viewer"
+    },
+    {
+      "label": "File Node Resolution",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Keep the same relative paths that the canvas uses inside your vault, so that file nodes resolve.",
+      "id": "readme_file_node_resolution",
+      "community": 14,
+      "norm_label": "file node resolution"
+    },
+    {
+      "label": "Embedded Note Document",
+      "file_type": "document",
+      "source_file": "public/content/notes/about.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "notes_about_embedded_note",
+      "community": 14,
+      "norm_label": "embedded note document"
+    },
+    {
+      "label": "Screenshot: Impulsive Web Onboarding Portal",
+      "file_type": "image",
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-02T18:24:40Z",
+      "author": null,
+      "contributor": null,
+      "id": "screenshot_2026_06_02_at_6_24_40_pm_2_image",
+      "community": 8,
+      "norm_label": "screenshot: impulsive web onboarding portal"
+    },
+    {
+      "label": "greytHR Onboarding Wizard Flow",
+      "file_type": "concept",
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "A structured 6-stage wizard flow designed to collect comprehensive employee information during onboarding, tracking progress through distinct stages from Personal Information to Attachments.",
+      "id": "screenshot_2026_06_02_at_6_24_40_pm_2_wizard",
+      "community": 8,
+      "norm_label": "greythr onboarding wizard flow"
+    },
+    {
+      "label": "Personal Information Form Layout",
+      "file_type": "rationale",
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "A 3-column form layout optimizing space utilization while grouping related fields like personal contacts, demographics, and physical metrics together for easier scanning.",
+      "id": "screenshot_2026_06_02_at_6_24_40_pm_2_personal_info_form",
+      "community": 8,
+      "norm_label": "personal information form layout"
+    },
+    {
+      "label": "Impulsive Web Corporate Branding",
+      "file_type": "concept",
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "White-labeled deployment of the greytHR portal featuring the 'Impulsive Web' corporate identity and logo in the header.",
+      "id": "screenshot_2026_06_02_at_6_24_40_pm_2_branding",
+      "community": 8,
+      "norm_label": "impulsive web corporate branding"
+    },
+    {
+      "label": "Employee Profile Summary Header Card",
+      "file_type": "concept",
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "A summary card displayed at the top of the onboarding interface to maintain context of the current employee (John Doe, ID: IW-024) and key details like location and contact.",
+      "id": "screenshot_2026_06_02_at_6_24_40_pm_2_employee_card",
+      "community": 8,
+      "norm_label": "employee profile summary header card"
+    },
+    {
+      "label": "Screenshot - Onboarding Wizard Previous Employment",
+      "file_type": "image",
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.52.19 PM.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-02T18:52:19Z",
+      "author": null,
+      "contributor": null,
+      "id": "screenshot_20260602_65219_image",
+      "community": 10,
+      "norm_label": "screenshot - onboarding wizard previous employment"
+    },
+    {
+      "label": "Multi-Step Onboarding Wizard Pattern",
+      "file_type": "rationale",
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.52.19 PM.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Guides the user sequentially through 6 onboarding steps (Personal Info, Previous Employment, Accounts/Statutory, Family Details, Nomination, Attachments) to structure a complex data entry process.",
+      "id": "screenshot_20260602_65219_onboarding_wizard_pattern",
+      "community": 10,
+      "norm_label": "multi-step onboarding wizard pattern"
+    },
+    {
+      "label": "Previous Employment Dynamic Form Layout",
+      "file_type": "concept",
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.52.19 PM.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Allows adding multiple historical employment records sequentially, capturing metadata like designation, salary, dates, and company address.",
+      "id": "screenshot_20260602_65219_previous_employment_form",
+      "community": 10,
+      "norm_label": "previous employment dynamic form layout"
+    },
+    {
+      "label": "Static Profile Summary Card",
+      "file_type": "concept",
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.52.19 PM.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Displays read-only core employee identity details (avatar, name, Emp ID, Location, Designation, Department) persistently at the top to maintain user context.",
+      "id": "screenshot_20260602_65219_employee_info_card",
+      "community": 10,
+      "norm_label": "static profile summary card"
+    },
+    {
+      "label": "Impulsive Web User Profile Screenshot",
+      "file_type": "image",
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "screenshot_80059_image",
+      "community": 6,
+      "norm_label": "impulsive web user profile screenshot"
+    },
+    {
+      "label": "Impulsive Web Portal Interface",
+      "file_type": "concept",
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "An employee self-service portal designed for centralizing employee profiles, personal information, and employment documents.",
+      "id": "screenshot_80059_impulsive_web_portal",
+      "community": 6,
+      "norm_label": "impulsive web portal interface"
+    },
+    {
+      "label": "Employee Profile Summary Header",
+      "file_type": "concept",
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "A card-based summary layout that sits at the top of the profile view to present critical identity info (Avatar, Employee ID, Location, point of contact) cleanly.",
+      "id": "screenshot_80059_profile_summary_card",
+      "community": 6,
+      "norm_label": "employee profile summary header"
+    },
+    {
+      "label": "Information Directory Sidebar",
+      "file_type": "concept",
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "A left-hand navigation menu mapping out sections of employee records, grouping extensive forms into digestible categories to improve completion rates and discoverability.",
+      "id": "screenshot_80059_navigation_sidebar",
+      "community": 6,
+      "norm_label": "information directory sidebar"
+    },
+    {
+      "label": "Personal Information Summary Grid",
+      "file_type": "concept",
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "A grid-based read-only profile directory mapping field keys (e.g. Blood Group, DOB, email) with empty states indicated by a em-dash, keeping a structured profile layout.",
+      "id": "screenshot_80059_personal_information_section",
+      "community": 6,
+      "norm_label": "personal information summary grid"
+    },
+    {
+      "label": "Progressive Information Collection Design Pattern",
+      "file_type": "rationale",
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Encourages users to complete profile information sections iteratively. Uses contextual empty states and explicit edit actions rather than showing all fields as active inputs at once, reducing cognitive load.",
+      "id": "screenshot_80059_progressive_onboarding_pattern",
+      "community": 6,
+      "norm_label": "progressive information collection design pattern"
+    },
+    {
+      "label": "diagram.svg",
+      "file_type": "image",
+      "source_file": "public/content/attachments/diagram.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "attachments_diagram_image",
+      "community": 12,
+      "norm_label": "diagram.svg"
+    },
+    {
+      "label": "Obsidian",
+      "file_type": "concept",
+      "source_file": "public/content/attachments/diagram.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "attachments_diagram_obsidian",
+      "community": 12,
+      "norm_label": "obsidian"
+    },
+    {
+      "label": "Web",
+      "file_type": "concept",
+      "source_file": "public/content/attachments/diagram.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "attachments_diagram_web",
+      "community": 12,
+      "norm_label": "web"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_local",
+      "target": "claude_settings_local_permissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "slug_page",
+      "target": "components_canvasviewer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "slug_page",
+      "target": "lib_canvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "slug_page",
+      "target": "lib_canvas_listcanvases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "slug_page",
+      "target": "lib_canvas_loadcanvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "slug_page",
+      "target": "lib_resolvefiles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "slug_page",
+      "target": "lib_resolvefiles_buildviewmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "slug_page",
+      "target": "slug_page_canvaspage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "slug_page",
+      "target": "slug_page_generatestaticparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "slug_page_generatestaticparams",
+      "target": "lib_canvas_listcanvases"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "slug_page_canvaspage",
+      "target": "lib_canvas_loadcanvas"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "slug_page_canvaspage",
+      "target": "lib_resolvefiles_buildviewmodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "admin_page_adminpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "lib_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "lib_auth_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "lib_canvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "lib_canvas_listcanvases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "lib_kv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "lib_kv_isredisconfigured",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "lib_kv_listpublic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "admin_page",
+      "target": "lib_kv_setpublic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/admin/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "admin_page_adminpage",
+      "target": "admin_page_toggle"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/admin/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "admin_page_adminpage",
+      "target": "lib_auth_auth"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/admin/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "admin_page_adminpage",
+      "target": "lib_canvas_listcanvases"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/admin/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "admin_page_adminpage",
+      "target": "lib_kv_isredisconfigured"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/admin/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "admin_page_adminpage",
+      "target": "lib_kv_listpublic"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/admin/toggle/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "toggle_route",
+      "target": "lib_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/admin/toggle/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "toggle_route",
+      "target": "lib_auth_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/admin/toggle/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "toggle_route",
+      "target": "lib_kv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/admin/toggle/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "toggle_route",
+      "target": "lib_kv_setpublic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/admin/toggle/route.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "toggle_route",
+      "target": "toggle_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "app/admin/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "admin_page_toggle",
+      "target": "toggle_route_post"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/admin/toggle/route.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "toggle_route_post",
+      "target": "lib_auth_auth"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/admin/toggle/route.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "toggle_route_post",
+      "target": "lib_kv_setpublic"
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/auth/[...nextauth]/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "nextauth_route",
+      "target": "lib_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/auth/[...nextauth]/route.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "nextauth_route",
+      "target": "lib_auth_handlers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/canvas/[slug]/status/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "status_route",
+      "target": "lib_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/canvas/[slug]/status/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "status_route",
+      "target": "lib_auth_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/canvas/[slug]/status/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "status_route",
+      "target": "lib_kv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/canvas/[slug]/status/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "status_route",
+      "target": "lib_kv_ispublic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/canvas/[slug]/status/route.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "status_route",
+      "target": "status_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_slug__page_canvaspage",
+      "target": "status_route_get"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/canvas/[slug]/status/route.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "status_route_get",
+      "target": "lib_auth_auth"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/canvas/[slug]/status/route.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "status_route_get",
+      "target": "lib_kv_ispublic"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "login_loginform",
+      "target": "login_actions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "login_loginform",
+      "target": "login_actions_signinwithcredentials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "login_loginform",
+      "target": "login_actions_signinwithgoogle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "login_loginform",
+      "target": "login_loginform_googleicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "login_loginform",
+      "target": "login_loginform_loginform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "login_page",
+      "target": "login_loginform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "login_loginform_loginform",
+      "target": "login_actions_signinwithcredentials"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "login_loginform_loginform",
+      "target": "login_actions_signinwithgoogle"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/login/LoginForm.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "login_loginform_loginform",
+      "target": "login_loginform_googleicon"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/login/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "login_page_loginpage",
+      "target": "login_loginform_loginform"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/actions.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "login_actions",
+      "target": "lib_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/actions.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "login_actions",
+      "target": "lib_auth_signin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/actions.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "login_actions",
+      "target": "login_actions_signinwithcredentials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "login_actions",
+      "target": "login_actions_signinwithgoogle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/login/actions.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "login_actions_signinwithgoogle",
+      "target": "lib_auth_signin"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/login/actions.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "login_actions_signinwithcredentials",
+      "target": "lib_auth_signin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/login/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "login_page",
+      "target": "login_page_loginpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "app_page_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "lib_canvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "lib_canvas_listcanvases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "lib_canvas_listcanvases"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "components_canvasviewer",
+      "target": "components_canvasviewer_canvasviewer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "components_canvasviewer",
+      "target": "components_canvasviewer_nodetypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "components_canvasviewer",
+      "target": "components_publishbutton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "components_canvasviewer",
+      "target": "lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "components_canvasviewer",
+      "target": "lib_types_viewedge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "components_canvasviewer",
+      "target": "lib_types_viewnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "components_canvasviewer",
+      "target": "nodes_filenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "components_canvasviewer",
+      "target": "nodes_groupnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "components_canvasviewer",
+      "target": "nodes_linknode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "components_canvasviewer",
+      "target": "nodes_textnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_slug__page_canvaspage",
+      "target": "components_canvasviewer_canvasviewer"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_canvasviewer_canvasviewer",
+      "target": "components_publishbutton_publishbutton"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_canvasviewer_canvasviewer",
+      "target": "nodes_filenode_filenode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_canvasviewer_canvasviewer",
+      "target": "nodes_groupnode_groupnode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_canvasviewer_canvasviewer",
+      "target": "nodes_linknode_linknode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_canvasviewer_canvasviewer",
+      "target": "nodes_textnode_textnode"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "components/CanvasViewer.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_canvasviewer_canvasviewer",
+      "target": "readme_static_canvas_viewer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/PublishButton.tsx",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "components_publishbutton",
+      "target": "components_publishbutton_globeicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/PublishButton.tsx",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "components_publishbutton",
+      "target": "components_publishbutton_lockicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/PublishButton.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "components_publishbutton",
+      "target": "components_publishbutton_publishbutton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/PublishButton.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_publishbutton",
+      "target": "components_publishbutton_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/PublishButton.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_publishbutton_publishbutton",
+      "target": "components_publishbutton_globeicon"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/PublishButton.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_publishbutton_publishbutton",
+      "target": "components_publishbutton_lockicon"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "nodes_filenode",
+      "target": "lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "nodes_filenode",
+      "target": "lib_types_resolvedfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "nodes_filenode",
+      "target": "nodes_filenode_filenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "nodes_filenode",
+      "target": "nodes_handles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "nodes_filenode",
+      "target": "nodes_handles_sidehandles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "nodes_filenode",
+      "target": "nodes_markdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "nodes_filenode",
+      "target": "nodes_markdown_markdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nodes_filenode_filenode",
+      "target": "nodes_handles_sidehandles"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nodes_filenode_filenode",
+      "target": "nodes_markdown_markdown"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "components/nodes/FileNode.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nodes_filenode_filenode",
+      "target": "nodes_textnode_textnode"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/GroupNode.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "nodes_groupnode",
+      "target": "lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/GroupNode.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "nodes_groupnode",
+      "target": "lib_types_groupdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/GroupNode.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "nodes_groupnode",
+      "target": "nodes_groupnode_bg_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/GroupNode.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "nodes_groupnode",
+      "target": "nodes_groupnode_groupnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/GroupNode.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "nodes_groupnode",
+      "target": "nodes_handles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/GroupNode.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "nodes_groupnode",
+      "target": "nodes_handles_sidehandles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/nodes/GroupNode.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nodes_groupnode_groupnode",
+      "target": "nodes_handles_sidehandles"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "components/nodes/LinkNode.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nodes_linknode_linknode",
+      "target": "nodes_groupnode_groupnode"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/LinkNode.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "nodes_linknode",
+      "target": "lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/LinkNode.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "nodes_linknode",
+      "target": "lib_types_linkdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/LinkNode.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "nodes_linknode",
+      "target": "nodes_handles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/LinkNode.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "nodes_linknode",
+      "target": "nodes_handles_sidehandles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/LinkNode.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "nodes_linknode",
+      "target": "nodes_linknode_linknode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/nodes/LinkNode.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nodes_linknode_linknode",
+      "target": "nodes_handles_sidehandles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/Markdown.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "nodes_markdown",
+      "target": "nodes_markdown_markdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "nodes_textnode",
+      "target": "nodes_markdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "nodes_textnode",
+      "target": "nodes_markdown_markdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nodes_textnode_textnode",
+      "target": "nodes_markdown_markdown"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "nodes_textnode",
+      "target": "lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "nodes_textnode",
+      "target": "lib_types_textdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "nodes_textnode",
+      "target": "nodes_handles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "nodes_textnode",
+      "target": "nodes_handles_sidehandles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "nodes_textnode",
+      "target": "nodes_textnode_textnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/nodes/TextNode.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nodes_textnode_textnode",
+      "target": "nodes_handles_sidehandles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/handles.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "nodes_handles",
+      "target": "nodes_handles_hidden",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/handles.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "nodes_handles",
+      "target": "nodes_handles_sidehandles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/nodes/handles.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "nodes_handles",
+      "target": "nodes_handles_sides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/nodes/handles.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "nodes_handles_sidehandles",
+      "target": "nodes_handles_sides"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/auth.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "lib_auth",
+      "target": "lib_auth_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/auth.config.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "lib_auth_config",
+      "target": "lib_auth_config_authconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "middleware.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "middleware",
+      "target": "lib_auth_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/auth.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "lib_auth",
+      "target": "lib_auth_config_authconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/auth.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_auth_auth",
+      "target": "lib_auth_config_authconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "middleware.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "middleware",
+      "target": "lib_auth_config_authconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "middleware.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "middleware_default",
+      "target": "lib_auth_config_authconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/auth.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "lib_auth",
+      "target": "lib_auth_handlers_auth_signin_signout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_canvas_content_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_canvas_listcanvases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_canvas_loadcanvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_canvas_nearestsides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_canvas_preset_colors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_canvas_resolvecolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_types_canvascolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_types_jsoncanvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_types_nodebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/canvas.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_canvas",
+      "target": "lib_types_side",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_canvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/canvas.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_canvas_listcanvases",
+      "target": "lib_canvas_content_dir"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/canvas.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_canvas_loadcanvas",
+      "target": "lib_canvas_content_dir"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_canvas_content_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_resolvefiles_resolvefilenode",
+      "target": "lib_canvas_content_dir"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_slug__page_generatestaticparams",
+      "target": "lib_canvas_listcanvases"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": ".claude/settings.local.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_claude_settings_local_permissions",
+      "target": "lib_canvas_loadcanvas"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_slug__page_canvaspage",
+      "target": "lib_canvas_loadcanvas"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/canvas.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_canvas_resolvecolor",
+      "target": "lib_canvas_preset_colors"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_canvas_resolvecolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_resolvefiles_buildviewmodel",
+      "target": "lib_canvas_resolvecolor"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_canvas_nearestsides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_resolvefiles_buildviewmodel",
+      "target": "lib_canvas_nearestsides"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "lib_kv",
+      "target": "lib_kv_base",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "lib_kv",
+      "target": "lib_kv_ispublic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "lib_kv",
+      "target": "lib_kv_isredisconfigured",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "lib_kv",
+      "target": "lib_kv_listpublic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "lib_kv",
+      "target": "lib_kv_redisget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "lib_kv",
+      "target": "lib_kv_redispost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "lib_kv",
+      "target": "lib_kv_setpublic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "middleware.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "middleware",
+      "target": "lib_kv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_kv_isredisconfigured",
+      "target": "lib_kv_base"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_kv_redisget",
+      "target": "lib_kv_base"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_kv_redispost",
+      "target": "lib_kv_base"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/kv.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_kv_ispublic",
+      "target": "lib_kv_redisget"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/kv.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_kv_listpublic",
+      "target": "lib_kv_redisget"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/kv.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_kv_setpublic",
+      "target": "lib_kv_redispost"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "middleware.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "middleware",
+      "target": "lib_kv_ispublic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "middleware.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "middleware_default",
+      "target": "lib_kv_ispublic"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/admin/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_page_toggle",
+      "target": "lib_kv_setpublic"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_resolvefiles_buildviewmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_resolvefiles_extractsubpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_resolvefiles_image_ext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_resolvefiles_resolvefilenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_resolvefiles_tocontenturl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_types_jsoncanvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_types_resolvedfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_types_side",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_types_viewedge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_types_viewmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_resolvefiles",
+      "target": "lib_types_viewnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_resolvefiles_resolvefilenode",
+      "target": "lib_resolvefiles_image_ext"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_resolvefiles_buildviewmodel",
+      "target": "lib_resolvefiles_tocontenturl"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_resolvefiles_resolvefilenode",
+      "target": "lib_resolvefiles_tocontenturl"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_resolvefiles_buildviewmodel",
+      "target": "lib_resolvefiles_resolvefilenode"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_resolvefiles_resolvefilenode",
+      "target": "lib_resolvefiles_extractsubpath"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/[slug]/page.tsx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_slug__page_canvaspage",
+      "target": "lib_resolvefiles_buildviewmodel"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_resolvefiles_buildviewmodel",
+      "target": "lib_types_jsoncanvas"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_resolvefiles_buildviewmodel",
+      "target": "lib_types_viewmodel"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "lib/resolveFiles.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_resolvefiles_buildviewmodel",
+      "target": "readme_file_node_resolution"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_arrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_canvascolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_canvasedge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_canvasnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_filenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_groupdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_groupnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_jsoncanvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_linkdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_linknode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_nodebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_nodedata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_resolvedfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_side",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_textdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_textnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_viewedge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_viewmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "lib_types",
+      "target": "lib_types_viewnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "context": "type",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "lib_types_filenode",
+      "target": "lib_types_nodebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "context": "type",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "lib_types_groupnode",
+      "target": "lib_types_nodebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "context": "type",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "lib_types_linknode",
+      "target": "lib_types_nodebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "context": "type",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "lib_types_textnode",
+      "target": "lib_types_nodebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "middleware.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "middleware",
+      "target": "middleware_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "middleware.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "middleware",
+      "target": "middleware_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "next-auth.d.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "next_auth_d",
+      "target": "next_auth_d_session",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "next.config.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "next_config",
+      "target": "next_config_nextconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_bcryptjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_next_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_markdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_remark_gfm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_upstash_redis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_xyflow_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_bcryptjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_exclude",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_allowjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_esmoduleinterop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_incremental",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_isolatedmodules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_moduleresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_plugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_resolvejsonmodule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_skiplibcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_strict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions_paths",
+      "target": "tsconfig_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/auth/[...nextauth]/route.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "___nextauth__route_get",
+      "target": "lib_auth_handlers"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/auth/[...nextauth]/route.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "___nextauth__route_post",
+      "target": "lib_auth_handlers"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_static_canvas_viewer",
+      "target": "readme_json_canvas"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_file_node_resolution",
+      "target": "readme_obsidian_canvas"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/content/notes/about.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "notes_about_embedded_note",
+      "target": "readme_file_node_resolution"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_2026_06_02_at_6_24_40_pm_2_image",
+      "target": "screenshot_2026_06_02_at_6_24_40_pm_2_branding"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_2026_06_02_at_6_24_40_pm_2_image",
+      "target": "screenshot_2026_06_02_at_6_24_40_pm_2_wizard"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_2026_06_02_at_6_24_40_pm_2_employee_card",
+      "target": "screenshot_2026_06_02_at_6_24_40_pm_2_wizard"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_2026_06_02_at_6_24_40_pm_2_personal_info_form",
+      "target": "screenshot_2026_06_02_at_6_24_40_pm_2_wizard"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_2026_06_02_at_6_24_40_pm_2_wizard",
+      "target": "screenshot_2026_06_02_at_6_24_40_pm_2_branding"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.52.19 PM.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_20260602_65219_image",
+      "target": "screenshot_20260602_65219_employee_info_card"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.52.19 PM.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_20260602_65219_image",
+      "target": "screenshot_20260602_65219_onboarding_wizard_pattern"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.52.19 PM.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_20260602_65219_image",
+      "target": "screenshot_20260602_65219_previous_employment_form"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.52.19 PM.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_20260602_65219_previous_employment_form",
+      "target": "screenshot_20260602_65219_onboarding_wizard_pattern"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_80059_image",
+      "target": "screenshot_80059_impulsive_web_portal"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_80059_impulsive_web_portal",
+      "target": "screenshot_80059_navigation_sidebar"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_80059_impulsive_web_portal",
+      "target": "screenshot_80059_personal_information_section"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_80059_impulsive_web_portal",
+      "target": "screenshot_80059_profile_summary_card"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_80059_navigation_sidebar",
+      "target": "screenshot_80059_progressive_onboarding_pattern"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/content/Screenshot 2026-06-02 at 8.00.59 PM.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "screenshot_80059_personal_information_section",
+      "target": "screenshot_80059_progressive_onboarding_pattern"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/attachments/diagram.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "attachments_diagram_image",
+      "target": "attachments_diagram_obsidian"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/attachments/diagram.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "attachments_diagram_image",
+      "target": "attachments_diagram_web"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/content/attachments/diagram.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "attachments_diagram_obsidian",
+      "target": "attachments_diagram_web"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "authentication_flow",
+      "label": "User Authentication Flow",
+      "nodes": [
+        "login_page_loginpage",
+        "login_loginform_loginform",
+        "login_actions_signinwithgoogle",
+        "login_actions_signinwithcredentials"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "app/login/page.tsx"
+    },
+    {
+      "id": "canvas_publish_management",
+      "label": "Canvas Publish Management",
+      "nodes": [
+        "admin_page_adminpage",
+        "admin_page_toggle",
+        "toggle_route_post",
+        "status_route_get"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "app/admin/page.tsx"
+    },
+    {
+      "id": "canvas_node_renderers",
+      "label": "Canvas Node Renderers",
+      "nodes": [
+        "nodes_filenode_filenode",
+        "nodes_groupnode_groupnode",
+        "nodes_linknode_linknode",
+        "nodes_textnode_textnode"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "components/CanvasViewer.tsx"
+    },
+    {
+      "id": "canvas_content_resolution",
+      "label": "Canvas Content Resolution Flow",
+      "nodes": [
+        "lib_canvas_content_dir",
+        "lib_resolvefiles_resolvefilenode",
+        "lib_resolvefiles_buildviewmodel"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "lib/resolveFiles.ts"
+    },
+    {
+      "id": "screenshot_2026_06_02_at_6_24_40_pm_2_onboarding_ui_components",
+      "label": "Onboarding UI Components Group",
+      "nodes": [
+        "screenshot_2026_06_02_at_6_24_40_pm_2_wizard",
+        "screenshot_2026_06_02_at_6_24_40_pm_2_personal_info_form",
+        "screenshot_2026_06_02_at_6_24_40_pm_2_employee_card",
+        "screenshot_2026_06_02_at_6_24_40_pm_2_branding"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png"
+    }
+  ],
+  "built_at_commit": "90212d258836b9680d48138ab2705c9ee72f1fda"
+}

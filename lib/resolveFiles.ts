@@ -1,6 +1,6 @@
-import fs from "node:fs";
 import path from "node:path";
-import { CONTENT_DIR, nearestSides, resolveColor } from "./canvas";
+import { nearestSides, resolveColor } from "./canvas";
+import { getStorage } from "./storage";
 import type {
   JSONCanvas,
   ResolvedFile,
@@ -19,27 +19,24 @@ const IMAGE_EXT = new Set([
   ".svg",
   ".bmp",
   ".avif",
+  ".webp",
 ]);
 
-/** Turn a vault-relative path into a public URL under /content. */
-function toContentUrl(file: string): string {
-  return "/content/" + file.split("/").map(encodeURIComponent).join("/");
-}
-
 /** Resolve a file node into renderable data at build time. */
-function resolveFileNode(file: string, subpath?: string): ResolvedFile {
+async function resolveFileNode(file: string, subpath?: string): Promise<ResolvedFile> {
   const ext = path.extname(file).toLowerCase();
 
   if (ext === ".md") {
-    const abs = path.join(CONTENT_DIR, file);
-    let content = fs.existsSync(abs)
-      ? fs.readFileSync(abs, "utf8")
+    const storage = getStorage();
+    const fileContent = await storage.readFile(file);
+    let content = fileContent !== null
+      ? fileContent
       : `> ⚠️ Missing file: \`${file}\`\n>\n> Copy it into \`public/content/${file}\`.`;
     if (subpath) content = extractSubpath(content, subpath);
     return { kind: "markdown", content, file };
   }
 
-  const src = toContentUrl(file);
+  const src = getStorage().getPublicUrl(file);
   if (IMAGE_EXT.has(ext)) return { kind: "image", src, file };
   return { kind: "other", src, file };
 }
@@ -69,39 +66,41 @@ function extractSubpath(md: string, subpath: string): string {
 }
 
 /** Build the serializable view model consumed by the client viewer. */
-export function buildViewModel(canvas: JSONCanvas): ViewModel {
+export async function buildViewModel(canvas: JSONCanvas): Promise<ViewModel> {
   const nodes = canvas.nodes ?? [];
   const edges = canvas.edges ?? [];
   const byId = new Map(nodes.map((n) => [n.id, n]));
 
-  const viewNodes: ViewNode[] = nodes.map((n) => {
-    const base = {
-      id: n.id,
-      type: n.type,
-      x: n.x,
-      y: n.y,
-      width: n.width,
-      height: n.height,
-      color: resolveColor(n.color),
-    };
-    switch (n.type) {
-      case "text":
-        return { ...base, data: { text: n.text } };
-      case "link":
-        return { ...base, data: { url: n.url } };
-      case "group":
-        return {
-          ...base,
-          data: {
-            label: n.label,
-            background: n.background ? toContentUrl(n.background) : undefined,
-            backgroundStyle: n.backgroundStyle,
-          },
-        };
-      case "file":
-        return { ...base, data: resolveFileNode(n.file, n.subpath) };
-    }
-  });
+  const viewNodes: ViewNode[] = await Promise.all(
+    nodes.map(async (n) => {
+      const base = {
+        id: n.id,
+        type: n.type,
+        x: n.x,
+        y: n.y,
+        width: n.width,
+        height: n.height,
+        color: resolveColor(n.color),
+      };
+      switch (n.type) {
+        case "text":
+          return { ...base, data: { text: n.text } };
+        case "link":
+          return { ...base, data: { url: n.url } };
+        case "group":
+          return {
+            ...base,
+            data: {
+              label: n.label,
+              background: n.background ? getStorage().getPublicUrl(n.background) : undefined,
+              backgroundStyle: n.backgroundStyle,
+            },
+          };
+        case "file":
+          return { ...base, data: await resolveFileNode(n.file, n.subpath) };
+      }
+    })
+  );
 
   const viewEdges: ViewEdge[] = edges.map((e) => {
     const from = byId.get(e.fromNode);

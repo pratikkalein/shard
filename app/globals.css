@@ -720,3 +720,54 @@ code {
   border-color: var(--border-strong);
   color: var(--text-muted);
 }
+
+/* ─────────────────────────────────────────────
+   Standalone Markdown Page
+   ───────────────────────────────────────────── */
+.markdown-page-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.markdown-page-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 96px 24px 64px;
+  display: flex;
+  justify-content: center;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+.markdown-page-article {
+  width: 100%;
+  max-width: 680px;
+  line-height: 1.8;
+  font-size: 16px;
+  animation: mdPageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes mdPageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.markdown-page-article h1.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+

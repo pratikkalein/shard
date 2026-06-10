@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { revalidatePath } from "next/cache";
 import { auth } from "@/lib/auth";
-import { listCanvases } from "@/lib/canvas";
+import { getStorage } from "@/lib/storage";
 import { listPublic, setPublic, isRedisConfigured } from "@/lib/kv";
 
 export default async function AdminPage() {
@@ -11,10 +11,16 @@ export default async function AdminPage() {
 
   const redisReady = isRedisConfigured();
 
-  const [canvases, publicSlugs] = await Promise.all([
-    Promise.resolve(listCanvases()),
+  const storage = getStorage();
+  const [canvases, markdowns, publicSlugs] = await Promise.all([
+    storage.listCanvases(),
+    storage.listMarkdown(),
     listPublic(),
   ]);
+  const items = [
+    ...canvases.map((slug) => ({ slug, type: "canvas" as const })),
+    ...markdowns.map((slug) => ({ slug, type: "markdown" as const })),
+  ].sort((a, b) => a.slug.localeCompare(b.slug));
   const publicSet = new Set(publicSlugs);
 
   async function toggle(formData: FormData) {
@@ -46,17 +52,20 @@ export default async function AdminPage() {
         </div>
       )}
 
-      {canvases.length === 0 ? (
-        <p className="empty-body">No canvases in <code>public/content/</code> yet.</p>
+      {items.length === 0 ? (
+        <p className="empty-body">No content in storage yet.</p>
       ) : (
         <ul className="admin-list">
-          {canvases.map((slug) => {
+          {items.map(({ slug, type }) => {
             const pub = publicSet.has(slug);
             return (
               <li key={slug} className="admin-item">
                 <div className="admin-item-left">
                   <Link href={`/${encodeURIComponent(slug)}`} className="admin-canvas-name">
                     {slug}
+                    <span style={{ fontSize: "11px", color: "var(--text-muted)", marginLeft: "6px" }}>
+                      ({type})
+                    </span>
                   </Link>
                   <span className={`admin-badge ${pub ? "badge-public" : "badge-private"}`}>
                     {pub ? "Public" : "Private"}

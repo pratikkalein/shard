@@ -1,0 +1,182 @@
+{
+  "/Users/pratikkale/Documents/GitHub/shard/.claude/settings.local.json": {
+    "mtime": 1780410982.999505,
+    "ast_hash": "24c745ad82582844e6166101f0cdfeb6",
+    "semantic_hash": "24c745ad82582844e6166101f0cdfeb6"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/app/[slug]/page.tsx": {
+    "mtime": 1780416685.1545908,
+    "ast_hash": "970b47b0466ad8db35a5c204dd97c030",
+    "semantic_hash": "970b47b0466ad8db35a5c204dd97c030"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/app/admin/page.tsx": {
+    "mtime": 1780419521.248262,
+    "ast_hash": "73294b6c1d3dac56514536dee1e52ba8",
+    "semantic_hash": "73294b6c1d3dac56514536dee1e52ba8"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/app/api/admin/toggle/route.ts": {
+    "mtime": 1780416639.9961565,
+    "ast_hash": "c1bdfc0cd56fd0b9a6fc40babb2e277a",
+    "semantic_hash": "c1bdfc0cd56fd0b9a6fc40babb2e277a"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/app/api/auth/[...nextauth]/route.ts": {
+    "mtime": 1780416610.355948,
+    "ast_hash": "5cd7338a2bcd1f4d6db1a7783b3ee765",
+    "semantic_hash": "5cd7338a2bcd1f4d6db1a7783b3ee765"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/app/api/canvas/[slug]/status/route.ts": {
+    "mtime": 1780416642.6440609,
+    "ast_hash": "3591392628f58121ac9fe6d1e4d191fb",
+    "semantic_hash": "3591392628f58121ac9fe6d1e4d191fb"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/app/layout.tsx": {
+    "mtime": 1780412290.403184,
+    "ast_hash": "80ce527419666bc18da08d4c92142831",
+    "semantic_hash": "80ce527419666bc18da08d4c92142831"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/app/login/LoginForm.tsx": {
+    "mtime": 1780416632.150494,
+    "ast_hash": "09836f9d2948c657e0ded143e239d388",
+    "semantic_hash": "09836f9d2948c657e0ded143e239d388"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/app/login/actions.ts": {
+    "mtime": 1780416613.331212,
+    "ast_hash": "c8edff7a33ef39fd2bac0707239f11f7",
+    "semantic_hash": "c8edff7a33ef39fd2bac0707239f11f7"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/app/login/page.tsx": {
+    "mtime": 1780416618.2346852,
+    "ast_hash": "35529e05f0f636828ec031dbfdd79865",
+    "semantic_hash": "35529e05f0f636828ec031dbfdd79865"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/app/page.tsx": {
+    "mtime": 1780416744.2130485,
+    "ast_hash": "bc8c58e65ea0ee0c065ecab81158357f",
+    "semantic_hash": "bc8c58e65ea0ee0c065ecab81158357f"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/components/CanvasViewer.tsx": {
+    "mtime": 1780416676.9616127,
+    "ast_hash": "a11a8503e773a5bf4c120025475ec1fd",
+    "semantic_hash": "a11a8503e773a5bf4c120025475ec1fd"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/components/PublishButton.tsx": {
+    "mtime": 1780416663.7559335,
+    "ast_hash": "ac3bd2848c9e480e53a487df17c62434",
+    "semantic_hash": "ac3bd2848c9e480e53a487df17c62434"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/components/nodes/FileNode.tsx": {
+    "mtime": 1780411854.5335448,
+    "ast_hash": "b75dba1d71003b187e4b0de13bbbac95",
+    "semantic_hash": "b75dba1d71003b187e4b0de13bbbac95"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/components/nodes/GroupNode.tsx": {
+    "mtime": 1780411857.8859286,
+    "ast_hash": "504e2c52be2347c06980fd16c7562253",
+    "semantic_hash": "504e2c52be2347c06980fd16c7562253"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/components/nodes/LinkNode.tsx": {
+    "mtime": 1780411850.3629262,
+    "ast_hash": "a0d11f8418268a02f70036f0e50fe5ff",
+    "semantic_hash": "a0d11f8418268a02f70036f0e50fe5ff"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/components/nodes/Markdown.tsx": {
+    "mtime": 1780411844.2404583,
+    "ast_hash": "00b422eac78df92a5ca4f809956199af",
+    "semantic_hash": "00b422eac78df92a5ca4f809956199af"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/components/nodes/TextNode.tsx": {
+    "mtime": 1780411846.5225308,
+    "ast_hash": "4a55974ea11ff74f55ca8a8372115cad",
+    "semantic_hash": "4a55974ea11ff74f55ca8a8372115cad"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/components/nodes/handles.tsx": {
+    "mtime": 1780411841.4717023,
+    "ast_hash": "f998a489593e53f0b7e1e19cbccd9378",
+    "semantic_hash": "f998a489593e53f0b7e1e19cbccd9378"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/lib/auth.config.ts": {
+    "mtime": 1780416580.3148937,
+    "ast_hash": "5f0791d3aecbb1e58cd88db237a67f7a",
+    "semantic_hash": "5f0791d3aecbb1e58cd88db237a67f7a"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/lib/auth.ts": {
+    "mtime": 1780416592.9743254,
+    "ast_hash": "e7737851da76df9dd0af9839b87c1bde",
+    "semantic_hash": "e7737851da76df9dd0af9839b87c1bde"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/lib/canvas.ts": {
+    "mtime": 1780411818.9119184,
+    "ast_hash": "290512ae4aa63979117e11d9019f7c43",
+    "semantic_hash": "290512ae4aa63979117e11d9019f7c43"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/lib/kv.ts": {
+    "mtime": 1780419640.1404345,
+    "ast_hash": "90925e9cde083f4dbd5832028b16b046",
+    "semantic_hash": "90925e9cde083f4dbd5832028b16b046"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/lib/resolveFiles.ts": {
+    "mtime": 1780411834.6746023,
+    "ast_hash": "4b4067086d8be75f024c6ed908bc7395",
+    "semantic_hash": "4b4067086d8be75f024c6ed908bc7395"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/lib/types.ts": {
+    "mtime": 1780411810.2099771,
+    "ast_hash": "22faefa40b62724624545291a9260923",
+    "semantic_hash": "22faefa40b62724624545291a9260923"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/middleware.ts": {
+    "mtime": 1780416598.8286452,
+    "ast_hash": "8bf63222e062b768a37139395dc19260",
+    "semantic_hash": "8bf63222e062b768a37139395dc19260"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/next-auth.d.ts": {
+    "mtime": 1780416584.2226367,
+    "ast_hash": "45759b33f20e68a88a28621477062ef9",
+    "semantic_hash": "45759b33f20e68a88a28621477062ef9"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/next.config.mjs": {
+    "mtime": 1780411797.0126457,
+    "ast_hash": "ae2f1c11e6fda62852a887288cf9a73a",
+    "semantic_hash": "ae2f1c11e6fda62852a887288cf9a73a"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/package.json": {
+    "mtime": 1780416562.321563,
+    "ast_hash": "bafe6a869b5bcb31d14aa9d47865b4fe",
+    "semantic_hash": "bafe6a869b5bcb31d14aa9d47865b4fe"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/tsconfig.json": {
+    "mtime": 1780411795.1424737,
+    "ast_hash": "3845ba465b50728d69e9dc9c327d8a56",
+    "semantic_hash": "3845ba465b50728d69e9dc9c327d8a56"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/README.md": {
+    "mtime": 1780412365.1903005,
+    "ast_hash": "59aef421678997e472569b7e40aad757",
+    "semantic_hash": "59aef421678997e472569b7e40aad757"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/public/content/notes/about.md": {
+    "mtime": 1780411916.5133862,
+    "ast_hash": "00e09a70a48ee3468f8bc6136bb0a065",
+    "semantic_hash": "00e09a70a48ee3468f8bc6136bb0a065"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/public/content/Screenshot 2026-06-02 at 6.24.40 PM (2).png": {
+    "mtime": 1780404893.5402856,
+    "ast_hash": "8c8f933a6527e00e39fc1bfd68896651",
+    "semantic_hash": "8c8f933a6527e00e39fc1bfd68896651"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/public/content/Screenshot 2026-06-02 at 6.52.19 PM.png": {
+    "mtime": 1780406546.3892927,
+    "ast_hash": "1c18d4bab302f421c1acf350d1601ae2",
+    "semantic_hash": "1c18d4bab302f421c1acf350d1601ae2"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/public/content/Screenshot 2026-06-02 at 8.00.59 PM.png": {
+    "mtime": 1780410663.5528877,
+    "ast_hash": "f24cbae1ff15aff70c68ad7faa1ab8f5",
+    "semantic_hash": "f24cbae1ff15aff70c68ad7faa1ab8f5"
+  },
+  "/Users/pratikkale/Documents/GitHub/shard/public/content/attachments/diagram.svg": {
+    "mtime": 1780411920.458146,
+    "ast_hash": "d54f31fe7a35cd16e43d6a85ef98d482",
+    "semantic_hash": "d54f31fe7a35cd16e43d6a85ef98d482"
+  }
+}

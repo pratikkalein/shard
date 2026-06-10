@@ -1,12 +1,20 @@
 import { notFound } from "next/navigation";
-import { listCanvases, loadCanvas } from "@/lib/canvas";
+import { getStorage } from "@/lib/storage";
 import { buildViewModel } from "@/lib/resolveFiles";
 import CanvasViewer from "@/components/CanvasViewer";
+import MarkdownPage from "@/components/MarkdownPage";
 
-export const dynamicParams = false;
+export const dynamicParams = true;
+export const revalidate = 3600;
 
-export function generateStaticParams() {
-  return listCanvases().map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  const storage = getStorage();
+  const [canvases, markdowns] = await Promise.all([
+    storage.listCanvases(),
+    storage.listMarkdown(),
+  ]);
+  const allSlugs = Array.from(new Set([...canvases, ...markdowns]));
+  return allSlugs.map((slug) => ({ slug }));
 }
 
 export default async function CanvasPage({
@@ -16,9 +24,22 @@ export default async function CanvasPage({
 }) {
   const { slug } = await params;
   const name = decodeURIComponent(slug);
-  const canvas = loadCanvas(name);
-  if (!canvas) notFound();
+  const storage = getStorage();
 
-  const { nodes, edges } = buildViewModel(canvas);
-  return <CanvasViewer title={name} slug={name} nodes={nodes} edges={edges} />;
+  // 1. Try to load as canvas
+  const canvas = await storage.readCanvas(name);
+  if (canvas) {
+    const { nodes, edges } = await buildViewModel(canvas);
+    return <CanvasViewer title={name} slug={name} nodes={nodes} edges={edges} />;
+  }
+
+  // 2. Try to load as standalone markdown
+  const markdownContent = await storage.readFile(`${name}.md`);
+  if (markdownContent !== null) {
+    // Extract file basename for display title
+    const displayTitle = name.substring(name.lastIndexOf("/") + 1);
+    return <MarkdownPage title={displayTitle} slug={name} content={markdownContent} />;
+  }
+
+  notFound();
 }

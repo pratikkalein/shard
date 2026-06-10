@@ -1,0 +1,10 @@
+{
+  "id": "shard-publish",
+  "name": "Shard Publish",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Publish Obsidian canvases and notes directly to Shard",
+  "author": "Antigravity",
+  "authorUrl": "https://github.com/pratikkalein/shard",
+  "isDesktopOnly": false
+}

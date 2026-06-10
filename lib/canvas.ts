@@ -1,29 +1,15 @@
-import fs from "node:fs";
-import path from "node:path";
 import type { CanvasColor, JSONCanvas, NodeBase, Side } from "./types";
+import { getStorage } from "./storage";
 
-// All published content lives here so that referenced images are also
-// served as static assets (e.g. /content/attachments/diagram.svg).
-export const CONTENT_DIR = path.join(process.cwd(), "public", "content");
+export { CONTENT_DIR } from "./storage-local";
 
 /** Slugs (filenames without extension) of every .canvas file in content. */
-export function listCanvases(): string[] {
-  if (!fs.existsSync(CONTENT_DIR)) return [];
-  return fs
-    .readdirSync(CONTENT_DIR)
-    .filter((f) => f.toLowerCase().endsWith(".canvas"))
-    .map((f) => f.slice(0, -".canvas".length))
-    .sort((a, b) => a.localeCompare(b));
+export async function listCanvases(): Promise<string[]> {
+  return getStorage().listCanvases();
 }
 
-export function loadCanvas(slug: string): JSONCanvas | null {
-  const file = path.join(CONTENT_DIR, `${slug}.canvas`);
-  if (!fs.existsSync(file)) return null;
-  try {
-    return JSON.parse(fs.readFileSync(file, "utf8")) as JSONCanvas;
-  } catch {
-    return null;
-  }
+export async function loadCanvas(slug: string): Promise<JSONCanvas | null> {
+  return getStorage().readCanvas(slug);
 }
 
 // Obsidian's six canvas colour presets.
